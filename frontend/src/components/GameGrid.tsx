@@ -29,11 +29,15 @@ export const GameGrid = ({ gameQuery }: Props) => {
               <GameCardSkeleton />
             </GameCardContainer>
           ))}
-        {games.map((game) => (
-          <GameCardContainer key={game.id}>
-            <GameCard game={game} />
-          </GameCardContainer>
-        ))}
+        {games && games.length > 0 ? (
+          games.map((game) => (
+            <GameCardContainer key={game.id}>
+              <GameCard game={game} />
+            </GameCardContainer>
+          ))
+        ) : (
+          !isLoading && <Text>No games available.</Text>
+        )}
       </SimpleGrid>
     </div>
   );

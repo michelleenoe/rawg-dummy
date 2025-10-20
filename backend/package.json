@@ -12,17 +12,14 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0",
-    "mysql2": "^3.12.0",
+    "mysql2": "3.12.0",
     "nodemon": "^3.1.10",
-    "reflect-metadata": "^0.2.2",
-    "typeorm": "^0.3.27"
+    "reflect-metadata": "0.2.2",
+    "typeorm": "0.3.21"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
-    "@types/node": "^24.6.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
-  },
-  "main": "index.js"
+    "@types/cors": "^2.8.19"
+  }
 }

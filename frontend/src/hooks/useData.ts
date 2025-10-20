@@ -12,7 +12,7 @@ interface Response<T> {
 const useData = <T>(
   endpoint: string,
   requestConfig?: AxiosRequestConfig,
-  dependencies?: unknown[],
+  dependencies?: any[],
 ) => {
   const [data, setData] = useState<T[]>([]);
   const [error, setError] = useState("");
