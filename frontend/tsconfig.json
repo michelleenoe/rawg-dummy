@@ -21,6 +21,7 @@
     "strict": true, // Enable all strict type-checking options
     "noUnusedLocals": true, // Report errors on unused local variables
     "noUnusedParameters": true, // Report errors on unused parameters
+    "erasableSyntaxOnly": true, // Only allow erasable syntax
     "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statements
     "noUncheckedSideEffectImports": true, // Disallow imports with unchecked side effects
     "noImplicitReturns": true, // Report error when not all code paths in function return a value
