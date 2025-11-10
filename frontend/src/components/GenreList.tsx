@@ -1,16 +1,14 @@
 import useGenres from "../hooks/useGenres";
-import { type Genre } from "../services/genreService";
+import useGameQueryStore from "../store";
 import CustomList from "./reusableComponents/CustomList";
 
-interface Props {
-  onSelectGenre: (genre: Genre | null) => void;
-  selectedGenre: Genre | null;
-}
+const GenreList = () => {
+  const selectedGenre = useGameQueryStore((s) => s.gameQuery.genre);
+  const setGenre = useGameQueryStore((s) => s.setGenre);
 
-const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
   return (
     <CustomList
-      onSelectItem={onSelectGenre}
+      onSelectItem={setGenre}
       selectedItem={selectedGenre}
       title="Genres"
       useDataHook={useGenres}
